@@ -13,7 +13,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 /* add icons to the library */
-library.add(faSearch, faBars)
+library.add(faSearch, faBars, )
 
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)
