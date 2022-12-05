@@ -11,7 +11,18 @@ export default {
                 'EVENTS',
                 'ELEMENTS'
                 ],
-            images: [],
+            images: [
+                {
+                    image: '../img/rev-slider-main-home-img-03.jpg',
+                    title: 'Our Team',
+                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil voluptates fuga hic reprehenderit eos? Doloremque, voluptate ipsum, fuga corporis vero nihil repellat eius voluptas deserunt a magni sapiente amet perferendis.'
+                },
+                {
+                    image: '../img/rev-slider-main-home-img-02.png',
+                    title: 'Contact Us',
+                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil voluptates fuga hic reprehenderit eos? Doloremque, voluptate ipsum, fuga corporis vero nihil repellat eius voluptas deserunt a magni sapiente amet perferendis.'
+                },
+            ],
 
         }
     }
@@ -52,7 +63,9 @@ export default {
         </div>
         <div class="text-header">
             <h1>Our Team<span class="oragePoint">.</span></h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil voluptates fuga hic reprehenderit eos? Doloremque, voluptate ipsum, fuga corporis vero nihil repellat eius voluptas deserunt a magni sapiente amet perferendis.</p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil voluptates fuga hic reprehenderit eos? Doloremque, voluptate ipsum, fuga corporis vero nihil repellat eius voluptas deserunt a magni sapiente amet perferendis.
+            </p>
             <div class="headerBtn">
                 <button type="button" class="button-white">
                     READ MORE
