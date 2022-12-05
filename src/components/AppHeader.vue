@@ -20,7 +20,17 @@ export default {
                 <nav>
                     <ul>
                         <li v-for="link in links">
-                            <a href="#"><h4>{{ link }}</h4></a>
+                            <a href="#"><h5>{{ link }}</h5></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <font-awesome-icon icon="fa-solid fa-bars" />
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -30,26 +40,37 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.container {
+header {
+    background-image: url('../img/rev-slider-main-home-img-03.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 890px;
+    .container {
     max-width: 1760px;
     display: flex;
     justify-content: space-between;
-    padding: 40px 0;
+    padding: 30px 0;
     margin: auto;
-    img {
-        height: 25px;
-    }
-    ul {
-        display: flex;
-        li {
-        list-style: none;
-        padding: 0 40px;
-            a {
-                text-decoration: none;
-                color: #000;
+        img {
+            height: 25px;
+        }
+        ul {
+            display: flex;
+            li {
+            list-style: none;
+            padding: 0 40px;
+                a {
+                    text-decoration: none;
+                    color: #000;
+                    cursor: pointer;
+                }
+                a:hover {
+                    color: #ff4c19;
+                }
             }
         }
-    }
     
 }
+}
+
 </style>
