@@ -120,9 +120,13 @@ header {
         right: 55%;
         h1 {
             font-size: 70px;
+            padding: 20px 0;
             span {
                 color: #ff4c19;
             }
+        }
+        p {
+            padding-bottom: 20px;
         }
         .headerBtn {
             padding: 20px 0;
