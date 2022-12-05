@@ -26,6 +26,7 @@ export default {
 <style lang="scss" scoped>
 section {
     background-color: #fafafa;
+    padding-bottom: 140px;
     .container {
         max-width: 1300px;
         margin: auto;

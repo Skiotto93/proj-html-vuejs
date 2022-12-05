@@ -68,7 +68,6 @@ export default {
             }
             .cards {
                 display: flex;
-
                 .card {
                     width: 25%;
                     text-align: center;
