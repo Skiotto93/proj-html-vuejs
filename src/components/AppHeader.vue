@@ -32,15 +32,18 @@ export default {
                     <ul>
                         <li v-for="link in links">
                             <a href="#"><h5>{{ link }}</h5></a>
+                            <i class="fa-solid fa-arrow-right-long d-none"></i>
                         </li>
                         <li>
                             <a href="#">
                                 <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+                                <i class="fa-solid fa-arrow-right-long d-none"></i>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <font-awesome-icon icon="fa-solid fa-bars" />
+                                <i class="fa-solid fa-arrow-right-long d-none"></i>
                             </a>
                         </li>
                     </ul>
@@ -101,6 +104,7 @@ header {
             li {
             list-style: none;
             padding: 0 40px;
+            position: relative;
                 a {
                     text-decoration: none;
                     color: #000;
@@ -108,6 +112,30 @@ header {
                 }
                 a:hover {
                     color: #ff4c19;
+                }
+                .d-none {
+                    display: none;
+                }
+                a:hover + .d-none {
+                    display: block;
+                    color: #ff4c19;
+                    position: absolute;
+                    left: 15px;
+                    bottom: 1px;
+                }
+                .fa-magnifying-glass:hover + .d-none {
+                    display: block;
+                    color: #ff4c19;
+                    position: absolute;
+                    left: 15px;
+                    bottom: 1px;
+                }
+                .fa-bars:hover + .d-none {
+                    display: block;
+                    color: #ff4c19;
+                    position: absolute;
+                    left: 15px;
+                    bottom: 1px;
                 }
             }
         }
