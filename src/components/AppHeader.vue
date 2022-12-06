@@ -187,6 +187,9 @@ header {
                         width: 30px;                        
                     }
                 }
+                div:hover {
+                    border-left: none;
+                }
             }
             .button-orange {
                 padding: 10px;
@@ -200,6 +203,9 @@ header {
                     margin-left: 20px;
                     padding-left: 10px;
                     border-left: 1px solid;
+                }
+                div:hover {
+                    border-left: inherit;
                 }
             }
         }

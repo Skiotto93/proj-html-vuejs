@@ -30,7 +30,7 @@ export default {
     <section>
         <div class="container">
             <div class="text">
-                <h1>Our specialities<span class="oragePoint">.</span></h1>
+                <h1>Our specialities<span class="orangePoint">.</span></h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam temporibus officia impedit saepe eligendi.</p>
                 <div>_________</div>
             </div>

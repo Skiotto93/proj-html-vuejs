@@ -55,15 +55,18 @@ section {
                 padding: 25px 0;
             }
             .icons i {
-                font-size: 25px;
+                font-size: 15px;
                 background-color: #ff4c19;
                 color: white;
-                width: 40px;
-                height: 40px;
+                width: 30px;
+                height: 30px;
                 border-radius: 50%;
-                line-height: 40px;
+                line-height: 30px;
                 text-align: center;
                 margin-right: 10px;
+            }
+            .icons i:hover {
+                background-color: #1e1e1e;
             }
         }
     }
