@@ -6,6 +6,7 @@ import FourthSectionMain from './FourthSectionMain.vue';
 import FifthSectionMain from './FifthSectionMain.vue';
 import SixthSectionMain from './SixthSectionMain.vue';
 import SeventhSectionMain from './SeventhSectionMain.vue';
+import LastSectionMainVue from './LastSectionMain.vue';
 
 export default {
     name: 'AppMain',
@@ -17,6 +18,7 @@ export default {
         FifthSectionMain,
         SixthSectionMain,
         SeventhSectionMain,
+        LastSectionMainVue
     },
 }
 </script>
@@ -29,6 +31,7 @@ export default {
     <FifthSectionMain />
     <SixthSectionMain />
     <SeventhSectionMain />
+    <LastSectionMainVue />
 </template>
 
 <style lang="scss" scoped>
