@@ -95,7 +95,7 @@ section {
             }
             .events:hover {
                 background-color: #fff;
-                box-shadow: 0px -15px 10px -15px #a6a6a6;
+                background: linear-gradient(to bottom, #a6a6a6 0.2%, #fff 5px);
             }
             .events {
                 padding: 35px 40px;
