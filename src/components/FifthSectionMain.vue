@@ -6,6 +6,7 @@ export default {
 
 <template>
     <section>
+        <img class="bkg-circle" src="../img/svg-4.svg" alt="#">
         <div class="text">
             <h1>Latest news<span class="orangePoint">.</span></h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
@@ -79,15 +80,11 @@ export default {
 section {
     background-color: #fafafa;
     position: relative;
-    // .fa-arrow-left-long, .fa-arrow-right-long {
-    //     position: absolute;
-    //     bottom: 50%;
-    //     left: 100px;
-    //     font-size: 30px;
-    // }
-    // .fa-arrow-right-long {
-    //     right: 0;
-    // }
+    .bkg-circle {
+        position: absolute;
+        top: -80px;
+        left: 5%;
+    }
     .text {
         text-align: center;
         padding: 70px 0;

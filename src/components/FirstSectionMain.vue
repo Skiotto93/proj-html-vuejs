@@ -35,9 +35,24 @@ export default {
                 <div>_________</div>
             </div>
             <div class="cards">
-                <div class="card" v-for="card in cards">
-                    <img :src="card.image" :alt="card.title">
-                    <h3>{{ card.title }}</h3>
+                <div class="card">
+                    <img src="../img/svg-0.svg" alt="#">
+                    <h3>Knowing</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quam perspiciatis exercitationem sint non tempore quidem.</p>
+                </div>
+                <div class="card">
+                    <img src="../img/svg-1.svg" alt="#">
+                    <h3>Selling</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quam perspiciatis exercitationem sint non tempore quidem.</p>
+                </div>
+                <div class="card">
+                    <img src="../img/svg-2.svg" alt="#">
+                    <h3>Learning</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quam perspiciatis exercitationem sint non tempore quidem.</p>
+                </div>
+                <div class="card">
+                    <img src="../img/svg-3.svg" alt="#">
+                    <h3>Contact</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quam perspiciatis exercitationem sint non tempore quidem.</p>
                 </div>
             </div>
@@ -68,13 +83,22 @@ export default {
             }
             .cards {
                 display: flex;
+                justify-content: space-between;
+                width: 1000px;
+                margin: auto;
                 .card {
-                    width: 25%;
+                    width: 200px;
                     text-align: center;
                     img {
                         width: 150px;
                         height: 150px;
                         color: #ff4c19;
+                    }
+                    h3 {
+                        padding: 15px 0;
+                    }
+                    p {
+                        margin-bottom: 100px;
                     }
                 }
             }
