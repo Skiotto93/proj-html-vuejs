@@ -96,6 +96,9 @@ section {
             .events:hover {
                 background-color: #fff;
                 background: linear-gradient(to bottom, #a6a6a6 0.2%, #fff 5px);
+                h3 {
+                        color: #ff4612;
+                    }
             }
             .events {
                 padding: 35px 40px;
@@ -123,6 +126,7 @@ section {
                     h3 {
                         padding-bottom: 10px;
                     }
+                    
                     .d-flex {
                         display: flex;
                         padding-bottom: 10px;
