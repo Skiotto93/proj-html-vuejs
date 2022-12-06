@@ -142,6 +142,7 @@ section {
     max-width: 1400px;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 60px;
     img {
         filter: brightness(0);
     }
