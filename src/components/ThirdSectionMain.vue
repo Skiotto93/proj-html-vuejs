@@ -18,6 +18,55 @@ export default {
                     </div>
                     <div class="col-right">
                         <h3>Melbourne Coaching</h3>
+                        <div class="d-flex">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>9:00 am - 5:00 pm, Jan 7, 2022</p>
+                        </div>
+                        <div class="d-flex">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>Cambridge, MA 02138, USA</p>
+                        </div>
+                        <h4>READ MORE</h4>
+                    </div>
+                </div>
+                <div class="events">
+                    <div class="col-left">
+                        <div class="calendar">
+                            <span>11</span>
+                            <div>Jan, 2022</div>
+                        </div>
+                    </div>
+                    <div class="col-right">
+                        <h3>New York Coaching</h3>
+                        <div class="d-flex">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>9:00 am - 5:00 pm, Jan 11, 2022</p>
+                        </div>
+                        <div class="d-flex">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>Cambridge, MA 02138, USA</p>
+                        </div>
+                        <h4>READ MORE</h4>
+                    </div>
+                </div>
+                <div class="events">
+                    <div class="col-left">
+                        <div class="calendar">
+                            <span>21</span>
+                            <div>Jan, 2022</div>
+                        </div>
+                    </div>
+                    <div class="col-right">
+                        <h3>London Coaching</h3>
+                        <div class="d-flex">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>9:00 am - 5:00 pm, Jan 21, 2022</p>
+                        </div>
+                        <div class="d-flex">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>Cambridge, MA 02138, USA</p>
+                        </div>
+                        <h4>READ MORE</h4>
                     </div>
                 </div>
             </div>
@@ -31,14 +80,28 @@ section {
     height: 1060px;
     background-position: center;
     background-size: cover;
+    position: relative;
     .tab {
         width: 520px;
+        width: 520px;
+        position: absolute;
+        top: 190px;
+        left: 300px;
         .titleTab {
             background-color: #fafafa;
-            padding: 35px 45px;
+            h1 {
+                border-bottom: 1px solid lightgrey;
+                padding: 35px 40px;
+            }
+            .events:hover {
+                background-color: #fff;
+                box-shadow: 0px -15px 10px -15px #a6a6a6;
+            }
             .events {
-                padding: 40px 0;
+                padding: 35px 40px;
                 display: flex;
+                border-bottom: 1px solid lightgrey;
+                
                 .col-left {
                     width: 25%;
                     .calendar {
@@ -51,13 +114,26 @@ section {
                         }
                         div {
                             color: #ffb39e;
-                            // color: #909090;
                         }
                     }
                 }
                 .col-right {
                     width: 75%;
                     padding: 0 25px;
+                    h3 {
+                        padding-bottom: 10px;
+                    }
+                    .d-flex {
+                        display: flex;
+                        padding-bottom: 10px;
+                        i {
+                            margin-right: 10px;
+                            color: #ff4612;
+                        }
+                        p {
+                            color: #a6a6a6;
+                        }
+                    }
                 }
             }
         }
