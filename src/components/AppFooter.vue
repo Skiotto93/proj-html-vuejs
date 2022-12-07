@@ -1,6 +1,22 @@
 <script>
+import ImportantLinks from './ImportantLinks.vue';
+
 export default {
-    name: 'AppFooter'
+    name: 'AppFooter',
+    components: {
+        ImportantLinks,
+    },
+    data() {
+        return {
+            implinks: [
+                'About me',
+                'About us',
+                'Language packs',
+                'Become a coach',
+                'Monthly events'
+            ]
+        }
+    }
 }
 </script>
 
@@ -42,13 +58,10 @@ export default {
             <div class="col">
                 <h3>Important links</h3>
                 <div class="line"></div>
-                <div class="link">
-                    <a>About me</a>
-                    <a>About us</a>
-                    <a>Language packs</a>
-                    <a>Become a coach</a>
-                    <a>Monthly events</a>
-                </div>
+                <ImportantLinks 
+                v-for="implink in implinks"
+                :footerlink="implink"
+                />
             </div>
             <div class="col">
                 <h3>Contact me</h3>
