@@ -14,12 +14,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.link a {
+.link {
     padding-bottom: 10px;
-    cursor: pointer;
-}
-a:hover {
-    color: white;
-    filter: brightness(1);
+    a:hover {
+        cursor: pointer;
+        color: white;
+        filter: brightness(1);
+    }
 }
 </style>

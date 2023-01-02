@@ -6,7 +6,7 @@ export default {
 
 <template>
     <section>
-        <img src="../img/h1-img-04.jpg" alt="#">
+        <img class="peaple" src="../img/h1-img-04.jpg" alt="#">
         <i class="fa-solid fa-play"></i>
         <div class="circle">
             <img src="../img/svg-8.svg" alt="#">
@@ -20,6 +20,9 @@ export default {
 <style lang="scss" scoped>
 section {
     position: relative;
+    .peaple {
+        max-width: 100%;
+    }
     .fa-play {
         margin: 0;
         position: absolute;
