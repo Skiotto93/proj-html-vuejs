@@ -38,9 +38,9 @@ section {
         top: 50%;
         font-size: 30px;
     }
-    // .fa-arrow-left-long:hover, .fa-arrow-right-long:hover {
-    //     color: #fff;
-    // }
+    .fa-arrow-left-long:hover, .fa-arrow-right-long:hover {
+        color: #fff;
+    }
     .fa-arrow-left-long {
         left: 90px;
     }
