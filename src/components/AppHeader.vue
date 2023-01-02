@@ -12,9 +12,34 @@ export default {
     },
     data() {
         return {
-            description: {
-                title: 'Our Team',
-                text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil voluptates fuga hic reprehenderit eos? Doloremque, voluptate ipsum, fuga corporis vero nihil repellat eius voluptas deserunt a magni sapiente amet perferendis.'
+            currentIndex: 0,
+            descriptions: [
+                {
+                    title: 'Our Team',
+                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil voluptates fuga hic reprehenderit eos? Doloremque, voluptate ipsum, fuga corporis vero nihil repellat eius voluptas deserunt a magni sapiente amet perferendis.',
+                    image: '../img/rev-slider-main-home-img-03.jpg',
+                },
+                {
+                    title: 'Our Job',
+                    text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, facere sit numquam molestiae nemo, esse voluptatum nisi nihil voluptate aut modi, iure iste dignissimos tempore? Veniam consectetur iure quibusdam enim?',                    
+                    iamge: '../img/rev-slider-main-home-img-02.png',
+                }
+            ],
+        }
+    },
+    methods: {
+        nextIndex() {
+            if ( this.currentIndex === this.descriptions.length - 1 ) {
+                this.currentIndex = 0
+            } else {
+                this.currentIndex++
+            }
+        },
+        prevIndex() {
+            if ( this.currentIndex === 0 ) {
+                this.currentIndex = this.descriptions.length - 1
+            } else {
+                this.currentIndex--
             }
         }
     }
@@ -24,10 +49,13 @@ export default {
 
 <template>
     <header>
-        <i class="fa-solid fa-arrow fa-arrow-right-long"></i>
-        <i class="fa-solid fa-arrow fa-arrow-left-long"></i>
+        <i class="fa-solid fa-arrow fa-arrow-right-long" @click="nextIndex"></i>
+        <i class="fa-solid fa-arrow fa-arrow-left-long" @click="prevIndex"></i>
         <HeaderNavBar />
-        <AppHeaderSon :title="description.title" :text="description.text"/>
+        <AppHeaderSon v-for="(description, index) in descriptions" 
+        :title="description.title" :text="description.text" 
+        :class="{inactive: index === currentIndex}"
+        />
     </header>
 </template>
 

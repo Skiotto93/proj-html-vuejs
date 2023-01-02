@@ -3,7 +3,8 @@ export default {
     name: 'AppHeaderSon',
     props: {
         title: String,
-        text: String
+        text: String,
+        index: Number,
     }
 }
 </script>
@@ -32,11 +33,15 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+    .inactive {
+        display: none;
+    }
     .text-header {
         max-width: 600px;
         position: absolute;
         bottom: 35%;
         right: 55%;
+        
         h1 {
             font-size: 70px;
             padding: 20px 0;
