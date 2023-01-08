@@ -7,7 +7,6 @@ export default {
     data() {
         return {
             currentImage: 0,
-            index: 1,
             testimonials: [
                 {
                     name: 'Cynthia Clark',
@@ -63,9 +62,9 @@ export default {
                 <h3>{{ testimonial.name }}</h3>
                 <p>"{{ testimonial.text }}"</p>
                 <div class="progress-container">
-                    <span class="first">{{ currentImage }}</span>
+                    <span class="first">{{ index + 1 }}</span>
                     <progress max="100"></progress>    
-                    <span class="second">3</span>
+                    <span class="second">{{ testimonials.length }}</span>
                 </div>
             </div>
         </div>
