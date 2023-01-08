@@ -80,6 +80,7 @@ export default {
 section {
     background-color: #fafafa;
     position: relative;
+    z-index: 2;
     .bkg-circle {
         position: absolute;
         top: -80px;

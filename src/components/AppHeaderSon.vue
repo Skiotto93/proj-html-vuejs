@@ -4,13 +4,14 @@ export default {
     props: {
         title: String,
         text: String,
+        image: String,
         index: Number,
     }
 }
 </script>
 
 <template>
-    <div class="text-header">
+    <div class="text-header">       
         <h1>{{ title }}<span class="oragePoint">.</span></h1>
         <p>
             {{ text }}

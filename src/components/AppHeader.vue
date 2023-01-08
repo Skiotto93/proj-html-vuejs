@@ -22,7 +22,7 @@ export default {
                 {
                     title: 'Our Job',
                     text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, facere sit numquam molestiae nemo, esse voluptatum nisi nihil voluptate aut modi, iure iste dignissimos tempore? Veniam consectetur iure quibusdam enim?',                    
-                    iamge: '../img/rev-slider-main-home-img-02.png',
+                    image: '../img/rev-slider-main-home-img-02.jpg',
                 }
             ],
         }
@@ -49,6 +49,9 @@ export default {
 
 <template>
     <header>
+        <div class="carousel-images" v-for="(description, index) in descriptions">
+            <img :src="description.image" :alt="description.title">
+        </div> 
         <i class="fa-solid fa-arrow fa-arrow-right-long" @click="nextIndex"></i>
         <i class="fa-solid fa-arrow fa-arrow-left-long" @click="prevIndex"></i>
         <HeaderNavBar />
@@ -66,6 +69,9 @@ header {
     background-size: cover;
     height: 890px;
     position: relative;
+    .carousel-images {
+        max-width: 100%;
+    }
     .fa-arrow {
             font-size: 30px;
             position: absolute;
