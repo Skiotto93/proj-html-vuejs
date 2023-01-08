@@ -1,6 +1,49 @@
 <script>
 export default {
-    name: 'FifthSectionMain'
+    name: 'FifthSectionMain',
+    data() {
+        return {
+            currentImage: 0,
+            projects: [
+                {
+                    title: 'Next Investment',
+                    image: '../img/h1-blog-img-01.jpg',
+                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque suscipit, expedita nemo'
+                },
+                {
+                    title: 'Team Building',
+                    image: '../img/h1-blog-img-02.jpg',
+                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate officiis optio eius.'
+                },
+                {
+                    title: 'New Business',
+                    image: '../img/h1-blog-img-03.jpg',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium voluptas, cumque ducimus.'
+                },
+                {
+                    title: 'More Services',
+                    image: '../img/h1-blog-img-04.jpg',
+                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate officiis optio eius.'
+                }
+            ]
+        }
+    },
+    methods: {
+        nextIndex() {
+            if ( this.currentImage === this.projects.length - 1 ) {
+                this.currentImage = 0
+            } else {
+                this.currentImage++
+            }
+        },
+        prevIndex() {
+            if ( this.currentImage === 0 ) {
+                this.currentImage = this.projects.length - 1
+            } else {
+                this.currentImage--
+            }
+        },
+    },
 }
 </script>
 
@@ -13,12 +56,15 @@ export default {
             <div class="line"></div>
         </div>
         <div class="cards">
-            <i class="fa-solid fa-arrow-left-long"></i>
-            <i class="fa-solid fa-arrow-right-long"></i>
-            <div class="card">
+            <i class="fa-solid fa-arrow-left-long" @click="prevIndex"></i>
+            <i class="fa-solid fa-arrow-right-long" @click="nextIndex"></i>
+            <div class="card" 
+            v-for="(project, index) in projects"
+            :class="{inactive: index === currentImage}"
+            >
                 <div class="image">
-                    <img id="firstImage" src="../img/h1-blog-img-02.jpg" alt="#">
-                    <img id="secondImage" src="../img/h1-blog-img-03.jpg" alt="#">
+                    <img id="firstImage" :src="project.image" alt="#">
+                    <img id="secondImage" :src="project.image + 1" alt="#">
                     <div class="ticket">
                         <i class="fa-solid fa-tag"></i>
                         <span>Business, Leading</span>
@@ -30,11 +76,11 @@ export default {
                     <i class="fa-regular fa-user"></i>
                     <span>Amanda Doe</span>
                 </div>
-                <h2>Next Investment</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum inventore beatae numquam. Magnam, aliquid esse...</p>
+                <h2>{{ project.title }}</h2>
+                <p>{{ project.text }}</p>
                 <h4>READ MORE</h4>
             </div>
-            <div class="card">
+            <!-- <div class="card">
                 <div class="image">
                     <img id="firstImage" src="../img/h1-blog-img-03.jpg" alt="#">
                     <img id="secondImage" src="../img/h1-blog-img-04.jpg" alt="#">
@@ -71,7 +117,7 @@ export default {
                 <h2>New Business</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum inventore beatae numquam. Magnam, aliquid esse...</p>
                 <h4>READ MORE</h4>
-            </div>
+            </div> -->
         </div>
     </section>
 </template>
@@ -108,6 +154,9 @@ section {
         margin: auto;
         padding: 30px;
         display: flex;
+        .inactive {
+            display: none;
+        }
         .fa-arrow-left-long, .fa-arrow-right-long {
         position: absolute;
         bottom: 35%;
